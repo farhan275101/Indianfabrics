@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>VastraVani Looms — Direct Saree Manufacturer & B2B Wholesale Runway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #faf5f0;
+      --bg-blush: #fdf6f2;
+      --dark-espresso: #231b17;
+      --accent-red: #df382b;
+      --accent-red-hover: #c22b1f;
+      --accent-gold: #b68d52;
+      --text-main: #241c18;
+      --text-muted: #6e625b;
+      --border-soft: #e6dcd3;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body {
+      margin: 0; padding: 0; max-width: 100%;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font-family: inherit; }
+    img { display: block; max-width: 100%; }
+    [hidden] { display: none !important; }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent-red); margin-bottom: 6px;
+    }
+    .serif-heading {
+      font-family: var(--font-serif); font-weight: 500;
+      line-height: 1.1; color: var(--dark-espresso); margin: 0;
+    }
+
+    .btn-crimson {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--accent-red); color: #fff; border: 0; border-radius: 6px;
+      padding: 12px 24px; font-size: 13.5px; font-weight: 600; cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-crimson:hover { background: var(--accent-red-hover); transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: #fff; color: var(--text-main); border: 1px solid var(--border-soft);
+      border-radius: 6px; padding: 10px 18px; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .btn-outline:hover { border-color: var(--dark-espresso); }
+
+    /* Top Bar & Header */
+    .top-strip {
+      background: var(--dark-espresso); color: #f4eae1;
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 8px 16px; text-align: center;
+    }
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e4ddd5;
+    }
+    .header-inner {
+      max-width: 1320px; margin: 0 auto; height: 76px; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; flex-direction: column; line-height: 1; }
+    .brand-title {
+      font-family: var(--font-serif); font-size: 28px; font-weight: 700;
+      font-style: italic; color: var(--dark-espresso);
+    }
+    .brand-sub {
+      font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent-gold); font-weight: 700; margin-top: 2px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 22px; font-size: 13.5px; font-weight: 600; }
+    .nav-links button, .nav-links a {
+      background: none; border: 0; padding: 6px 0; cursor: pointer; color: var(--text-main);
+    }
+    .nav-links button:hover, .nav-links a:hover { color: var(--accent-red); }
+    .nav-admin-pill {
+      background: #f6ece3 !important; color: #7c5221 !important;
+      padding: 7px 14px !important; border-radius: 999px; font-size: 12px !important;
+    }
+    .bag-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--dark-espresso); color: #fff; border: 0; border-radius: 999px;
+      padding: 9px 16px; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+    .hamburger {
+      display: none; background: none; border: 0; font-size: 22px; cursor: pointer; padding: 4px;
+    }
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+      .hamburger { display: inline-flex; }
+      .header-inner { padding: 0 16px; height: 68px; }
+      .brand-title { font-size: 24px; }
+    }
+
+    /* Mobile Menu */
+    .mobile-drawer {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); z-index: 200; display: none;
+    }
+    .mobile-drawer.open { display: block; }
+    .mobile-drawer-panel {
+      width: 280px; height: 100%; background: var(--bg-cream); padding: 24px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .m-link {
+      text-align: left; background: none; border: 0; border-bottom: 1px solid var(--border-soft);
+      padding: 10px 0; font-size: 15px; font-weight: 600; cursor: pointer;
+    }
+
+    /* ================= 3D RUNWAY SECTION ================= */
+    .rw {
+      display: block; position: relative; background: #ffffff;
+      --rw-stage: #ffffff; --rw-panel: #ffffff; --rw-text: #151413;
+      --rw-muted: #66625c; --rw-accent: #151413; --rw-line: #e4ddd5;
+      --rw-cta-red: #df382b; --rw-thumb: 86px; --rw-panel-pad: 26px;
+      --rw-model-h: 500px; --rw-ease: cubic-bezier(.16, 1, .3, 1);
+      --rw-ease-silk: cubic-bezier(.65, 0, .35, 1);
+    }
+    .rw__sticky { height: calc(100svh - 110px); min-height: 570px; display: flex; flex-direction: column; }
+    .rw__grid {
+      display: grid; grid-template-columns: minmax(0, 1fr) 390px; grid-template-rows: minmax(0, 1fr);
+      width: 100%; flex: 1 1 auto; min-height: 0; border-bottom: 1px solid var(--rw-line);
+    }
+    .rw__left { position: relative; display: flex; flex-direction: column; background: #fff; overflow: hidden; min-height: 0; }
+    .rw__panel { position: relative; background: #fff; border-left: 1px solid var(--rw-line); }
+    .rw__panel-inner { position: absolute; inset: 0; display: flex; flex-direction: column; }
+
+    .rw__head { padding: 24px 44px 0; z-index: 5; }
+    .rw__eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rw-cta-red); display: block; margin-bottom: 4px; }
+    .rw__title { margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 44px; line-height: 1; letter-spacing: -0.02em; color: #151413; }
+    .rw__sub { margin: 6px 0 0; font-size: 12.5px; color: var(--rw-muted); max-width: 48ch; }
+
+    .rw__stage {
+      position: relative; flex: 1 1 auto; min-height: 0; touch-action: pan-y;
+      user-select: none; cursor: grab; outline: none; overflow: hidden; z-index: 0;
+    }
+    .rw.is-dragging .rw__stage { cursor: grabbing; }
+    .rw.rw--cursor .rw__stage, .rw.rw--cursor .rw__stage * { cursor: none !important; }
+    .rw__actors, .rw__heroes { position: absolute; inset: 0; }
+    .rw__heroes { pointer-events: none; z-index: 1500; }
+
+    .rw__sweep { position: absolute; inset: 0; z-index: 1550; mix-blend-mode: soft-light; pointer-events: none; overflow: hidden; }
+    .rw__sweep::before {
+      content: ""; position: absolute; top: -20%; bottom: -20%; left: 0; width: 42%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,0.25) 42%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.25) 58%, transparent);
+      transform: translateX(-130%) skewX(-12deg); opacity: 0;
+    }
+    .rw__stage.is-sweep .rw__sweep::before { animation: rw-sweep 1.4s var(--rw-ease-silk); }
+    @keyframes rw-sweep {
+      0% { transform: translateX(-130%) skewX(-12deg); opacity: 0; }
+      18% { opacity: 1; }
+      100% { transform: translateX(330%) skewX(-12deg); opacity: 0; }
+    }
+
+    .rw__model { position: absolute; left: 0; bottom: 0; transform-origin: 50% 100%; will-change: transform, opacity; opacity: 0; }
+    .rw__figure { position: relative; height: var(--rw-model-h); aspect-ratio: 0.5625; }
+    .rw__art { position: absolute; inset: 0; }
+    .rw__art img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 50% 18%; pointer-events: none;
+      border-radius: 10px; border: 1px solid rgba(21,20,19,0.08);
+      box-shadow: 0 20px 44px -18px rgba(21,20,19,0.25);
+    }
+    .rw__hit, .rw__zoom {
+      position: absolute; inset: 0; z-index: 1; background: transparent; border: 0; border-radius: 12px; cursor: pointer;
+    }
+    .rw__zoom { cursor: zoom-in; }
+    .rw__shadow {
+      position: absolute; left: 50%; bottom: 0; width: 130%; height: clamp(14px, 8%, 38px);
+      transform: translate(-50%, 50%); filter: blur(3px);
+      background: radial-gradient(closest-side, rgba(20,16,12,0.26), rgba(20,16,12,0.1) 45%, transparent 80%);
+      pointer-events: none;
+    }
+    .rw__hero {
+      position: absolute; left: var(--rw-hx, 50%); bottom: var(--rw-hy, 30px);
+      transform: translateX(-50%) scale(var(--rw-fs, 1)); transform-origin: 50% 100%;
+      opacity: 0; visibility: hidden; pointer-events: none;
+    }
+    .rw.rw--still .rw__hero.is-on { opacity: 1; visibility: visible; pointer-events: auto; }
+    .rw__hero .rw__art img { box-shadow: 0 28px 65px -20px rgba(21,20,19,0.34); }
+
+    /* Pins */
+    .rw.rw--popup .rw__hero .rw__pins { display: none !important; }
+    .rw__pins { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
+    .rw__pin {
+      position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px;
+      background: transparent; border: 0; display: grid; place-items: center; cursor: pointer; pointer-events: auto;
+    }
+    .rw__pin-dot {
+      position: relative; width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); color: #151413;
+      font-size: 11px; font-weight: 700; display: grid; place-items: center;
+      box-shadow: 0 4px 14px -4px rgba(0,0,0,0.35); transition: transform 0.4s, background 0.25s, color 0.25s;
+    }
+    .rw__pin-dot::before, .rw__pin-dot::after {
+      content: ""; position: absolute; inset: -5px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.85); animation: rw-ring 2.6s infinite;
+    }
+    .rw__pin-dot::before { border-color: rgba(255,255,255,0.55); animation-delay: 1.3s; }
+    @keyframes rw-ring { 0% { transform: scale(.8); opacity: .9; } 100% { transform: scale(1.7); opacity: 0; } }
+    .rw__pin.is-hot .rw__pin-dot, .rw__pin:hover .rw__pin-dot {
+      transform: scale(1.25); background: var(--rw-cta-red); color: #fff;
+    }
+    .rw__pin::after {
+      content: attr(data-tip); position: absolute; left: calc(100% - 4px); top: 50%;
+      max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,0.95);
+      color: #151413; font-size: 11px; font-weight: 600; box-shadow: 0 10px 26px -12px rgba(0,0,0,0.4);
+      opacity: 0; transform: translate(-8px, -50%) scale(.96); transition: opacity 0.3s, transform 0.45s var(--rw-ease);
+      pointer-events: none;
+    }
+    .rw__pin.is-hot::after, .rw__pin:hover::after { opacity: 1; transform: translate(0, -50%) scale(1); }
+
+    /* Custom Cursor */
+    .rw__cursor { position: absolute; top: 0; left: 0; width: 0; height: 0; z-index: 1700; pointer-events: none; }
+    .rw__cursor-in {
+      position: absolute; top: -42px; left: -42px; width: 84px; height: 84px; border-radius: 50%;
+      display: grid; place-items: center; color: #151413;
+      border: 1px solid rgba(21,20,19,0.28); background: rgba(255,255,255,0.45); backdrop-filter: blur(6px);
+      opacity: 0; transform: scale(.3); transition: transform 0.55s var(--rw-ease), opacity 0.3s, background 0.3s, color 0.3s;
+    }
+    .rw__cursor.is-on .rw__cursor-in { opacity: 1; transform: scale(1); }
+    .rw__cursor-label { grid-area: 1/1; font-size: 10px; font-weight: 600; letter-spacing: 0.24em; padding-left: 0.24em; text-transform: uppercase; white-space: nowrap; }
+    .rw__cursor-view { opacity: 0; }
+    .rw__cursor.is-view .rw__cursor-drag { opacity: 0; }
+    .rw__cursor.is-view .rw__cursor-view { opacity: 1; }
+    .rw__cursor.is-link .rw__cursor-in { transform: scale(.2); background: #151413; border-color: transparent; }
+    .rw__cursor.is-link .rw__cursor-label { opacity: 0; }
+    .rw.is-dragging .rw__cursor-in { transform: scale(.74); background: #151413; color: #fff; }
+
+    /* Controls & 01-06 Ticks */
+    .rw__controls { display: flex; align-items: center; gap: 14px; padding: 6px 36px 20px; z-index: 5; }
+    .rw__icon { width: 40px; height: 40px; display: grid; place-items: center; background: none; border: 0; color: #151413; cursor: pointer; }
+    .rw__auto .rw__pause { display: none; }
+    .rw__auto.is-playing .rw__play { display: none; }
+    .rw__auto.is-playing .rw__pause { display: block; }
+    .rw__ticks { flex: 1; display: flex; gap: 6px; min-width: 0; }
+    .rw__tick {
+      flex: 0 1 42px; min-width: 14px; height: 42px; display: flex; flex-direction: column;
+      justify-content: center; gap: 7px; color: var(--rw-muted); text-align: left;
+      background: none; border: 0; padding: 0; cursor: pointer;
+      transition: flex-basis 0.75s cubic-bezier(.2, 1.25, .3, 1), color 0.3s;
+    }
+    .rw__tick[aria-current="true"] { flex: 0 0 180px; color: #151413; }
+    .rw__tick-bar { position: relative; height: 2px; width: 100%; overflow: hidden; background: rgba(21,20,19,0.14); }
+    .rw__tick-bar::after {
+      content: ""; position: absolute; inset: 0; background: #151413;
+      transform: scaleX(0); transform-origin: left; transition: transform 0.9s var(--rw-ease), opacity 0.4s;
+    }
+    .rw__tick.is-past .rw__tick-bar::after { transform: scaleX(1); opacity: 0.35; }
+    .rw__tick[aria-current="true"] .rw__tick-bar::after { transform: scaleX(1); background: var(--rw-cta-red); }
+    .rw.is-playing .rw__tick[aria-current="true"] .rw__tick-bar::after { transform: scaleX(0); transition: none; }
+    .rw.is-playing .rw__tick[aria-current="true"].is-run .rw__tick-bar::after { animation: rw-fill 5s linear forwards; }
+    @keyframes rw-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .rw__tick-label { font-size: 10px; letter-spacing: 0.1em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+    .rw__tick-name { display: none; }
+    .rw__tick[aria-current="true"] .rw__tick-name { display: inline; }
+    .rw__walk { display: none; }
+
+    /* Right Panel */
+    .rw__panel-head { display: flex; justify-content: space-between; align-items: baseline; padding: 24px var(--rw-panel-pad) 12px; }
+    .rw__panel-title { margin: 0; font-family: var(--font-serif); font-weight: 600; font-size: 24px; }
+    .rw__label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rw-muted); }
+    .rw__look-panel { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; }
+    .rw__mhead { display: none; }
+    .rw__items { list-style: none; margin: 0; padding: 4px var(--rw-panel-pad) 16px; display: flex; flex-direction: column; overflow-y: auto; flex: 1 1 auto; min-height: 0; }
+    .rw__item {
+      position: relative; display: grid; grid-template-columns: var(--rw-thumb) minmax(0, 1fr) 42px;
+      column-gap: 14px; align-items: center; padding: 14px 0; border-top: 1px solid var(--rw-line);
+    }
+    .rw__item:last-child { border-bottom: 1px solid var(--rw-line); }
+    .rw__media { position: relative; display: block; aspect-ratio: 4/5; overflow: hidden; border-radius: 6px; background: #f5efe9; cursor: pointer; }
+    .rw__media img { width: 100%; height: 100%; object-fit: cover; }
+    .rw__num {
+      position: absolute; top: 6px; right: 6px; width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(255,255,255,0.92); color: #151413; font-size: 10px; font-weight: 700; display: grid; place-items: center;
+    }
+    .rw__item.is-hot .rw__num { background: var(--rw-cta-red); color: #fff; }
+    .rw__tag {
+      position: absolute; top: 8px; left: 6px; z-index: 2; background: var(--rw-cta-red); color: #fff;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 6px; border-radius: 3px;
+    }
+    .rw__info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .rw__type { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rw-muted); }
+    .rw__name { font-family: var(--font-serif); font-size: 18px; font-weight: 600; line-height: 1.2; cursor: pointer; }
+    .rw__price { font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .rw__moq-tag { font-size: 10px; background: #f6ece3; color: #7c5221; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+    .rw__add {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rw-line);
+      display: grid; place-items: center; background: #fff; cursor: pointer; font-size: 18px; transition: all 0.25s;
+    }
+    .rw__item.is-picking .rw__add { transform: rotate(45deg); background: #151413; color: #fff; border-color: #151413; }
+    .rw__item.is-added .rw__add { background: var(--rw-cta-red); color: #fff; border-color: var(--rw-cta-red); }
+    .rw__picker { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 10px; padding-top: 12px; }
+    .rw__vals { display: flex; flex-wrap: wrap; gap: 6px; }
+    .rw__pill { position: relative; cursor: pointer; }
+    .rw__pill input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .rw__pill-label {
+      display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px;
+      border-radius: 30px; border: 1px solid var(--rw-line); font-size: 11px; font-weight: 600;
+    }
+    .rw__pill input:checked + .rw__pill-label { background: #151413; color: #fff; border-color: #151413; }
+    .rw__confirm { min-height: 42px; border: 0; background: #151413; color: #fff; font-size: 12px; font-weight: 600; border-radius: 6px; cursor: pointer; }
+    .rw__bundle { padding: 14px var(--rw-panel-pad) 20px; display: flex; flex-direction: column; gap: 10px; background: #fdf9f5; border-top: 1px solid var(--rw-line); }
+    .rw__bundle-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+    .rw__bundle-title { font-size: 13px; font-weight: 600; display: block; }
+    .rw__bundle-note { font-size: 11px; color: var(--rw-muted); }
+    .rw__bundle-price strong { font-family: var(--font-serif); font-size: 22px; color: #151413; }
+    .rw__cta {
+      min-height: 48px; width: 100%; border: 0; border-radius: 6px; background: var(--rw-cta-red);
+      color: #fff; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .rw__look-panel.is-complete .rw__cta { background: #151413; }
+
+    /* Lightbox Popup */
+    .rw__lb {
+      position: absolute; inset: 0; z-index: 40; visibility: hidden; pointer-events: none;
+      background: #fff; opacity: 0; transition: opacity 0.4s, visibility 0s linear 0.4s;
+    }
+    .rw.rw--zoom .rw__lb { visibility: visible; pointer-events: auto; opacity: 1; transition: opacity 0.4s, visibility 0s; }
+    .rw__lb-stage { position: absolute; inset: 74px 30px 40px; display: flex; align-items: flex-end; justify-content: center; cursor: zoom-out; }
+    .rw__lb-model { position: relative; height: 100%; aspect-ratio: 0.5625; cursor: default; }
+    .rw__lb-model .rw__pins { display: block !important; }
+    .rw__lb-top { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 18px 26px 0 36px; }
+    .rw__lb-kicker { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rw-muted); display: block; }
+    .rw__lb-name { font-family: var(--font-serif); font-size: 24px; font-weight: 600; }
+    .rw__lb-close { width: 42px; height: 42px; border-radius: 50%; border: 1px solid #d9d0c7; background: #fff; cursor: pointer; font-size: 18px; }
+    .rw__lb-hint { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rw-muted); }
+
+    @media (max-width: 900px) {
+      .rw__sticky { height: auto; min-height: 0; }
+      .rw__grid { display: flex; flex-direction: column; }
+      .rw__left { min-height: 490px; padding-bottom: 18px; }
+      .rw__head { padding: 18px 18px 0; }
+      .rw__title { font-size: 28px; }
+      .rw__controls { display: none; }
+      .rw__walk { display: block; position: absolute; left: 50%; bottom: 8px; z-index: 1600; width: 140px; transform: translateX(-50%); }
+      .rw__walk-line { display: block; height: 2px; background: rgba(21,20,19,0.15); position: relative; }
+      .rw__walk-line::after {
+        content: ""; position: absolute; inset: 0; background: var(--rw-cta-red);
+        transform: scaleX(var(--rw-progress, 0.167)); transform-origin: left; transition: transform 0.7s var(--rw-ease);
+      }
+      .rw__panel { margin-top: -14px; border-radius: 20px 20px 0 0; border-left: 0; box-shadow: 0 -10px 30px rgba(0,0,0,0.08); z-index: 2; }
+      .rw__panel-inner { position: static; }
+      .rw__panel-head { display: none; }
+      .rw__mhead { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 20px 4px; }
+      .rw__mhead-title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; }
+      .rw__items { flex-direction: row; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 20px; gap: 14px; }
+      .rw__item { flex: 0 0 calc(100% - 44px); scroll-snap-align: start; border-top: 0; border-bottom: 0; border-right: 1px solid var(--rw-line); padding: 6px 14px 6px 0; }
+      .rw__item:last-child { border-right: 0; }
+    }
+
+    /* Modals & Drawers */
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(20, 15, 12, 0.6); backdrop-filter: blur(3px);
+      z-index: 3000; display: none; align-items: center; justify-content: center; padding: 16px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-card {
+      background: var(--bg-cream); width: 100%; max-width: 820px; max-height: 90vh;
+      overflow-y: auto; border-radius: 14px; position: relative; padding: 26px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    }
+    .modal-x {
+      position: sticky; top: 0; float: right; width: 36px; height: 36px; border-radius: 50%;
+      background: #fff; border: 1px solid var(--border-soft); font-size: 18px; cursor: pointer; z-index: 5;
+    }
+
+    .bag-backdrop {
+      position: fixed; inset: 0; background: rgba(20, 15, 12, 0.55); z-index: 3500;
+      display: none; justify-content: flex-end;
+    }
+    .bag-backdrop.open { display: flex; }
+    .bag-drawer {
+      width: 420px; max-width: 100%; height: 100%; background: var(--bg-cream);
+      display: flex; flex-direction: column; box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+    }
+
+    .vv-toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--dark-espresso); color: #fff; padding: 12px 22px; border-radius: 999px;
+      font-size: 13px; font-weight: 500; z-index: 9999; opacity: 0; pointer-events: none;
+      transition: all 0.3s ease; white-space: nowrap;
+    }
+    .vv-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    Direct From Varanasi &amp; Surat Looms &nbsp;✦&nbsp; 100% B2B Wholesale Factory Rates &nbsp;✦&nbsp; Pan-India &amp; Global Dispatch
+  </div>
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+        <a href="#runway" class="brand">
+          <span class="brand-title">VastraVani</span>
+          <span class="brand-sub">Wholesale Looms</span>
+        </a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#runway">3D Runway</a>
+        <a href="#catalog">Factory Catalog</a>
+        <button type="button" onclick="openTrackModal()">Track Order</button>
+        <button type="button" onclick="openCheckoutModal()">Bulk Checkout</button>
+        <button type="button" class="nav-admin-pill" onclick="openAdminModal()">🔒 Owner Admin</button>
+      </nav>
+
+      <button type="button" class="bag-btn" onclick="openBag()">
+        🛍️ <span>Bag (<span id="navBagPcs">0</span> Pcs)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-drawer" id="mobileNav" onclick="if(event.target===this) toggleMobileNav()">
+    <div class="mobile-drawer-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <strong style="font-family:var(--font-serif);font-size:26px;font-style:italic;">VastraVani</strong>
+        <button onclick="toggleMobileNav()" style="background:none;border:0;font-size:22px;cursor:pointer;">✕</button>
+      </div>
+      <a class="m-link" href="#runway" onclick="toggleMobileNav()">3D Runway</a>
+      <a class="m-link" href="#catalog" onclick="toggleMobileNav()">Factory Catalog</a>
+      <button class="m-link" onclick="toggleMobileNav();openTrackModal()">Track Order</button>
+      <button class="m-link" onclick="toggleMobileNav();openCheckoutModal()">Bulk Checkout</button>
+      <button class="m-link" onclick="toggleMobileNav();openAdminModal()" style="color:var(--accent-red);">🔒 Owner Admin Panel</button>
+    </div>
+  </div>
+
+  <!-- 1. 3D Runway Section -->
+  <section id="runway">
+    <div class="rw rw--popup is-playing" id="runwayRoot">
+      <div class="rw__sticky">
+        <div class="rw__grid">
+          <div class="rw__left">
+            <div class="rw__head">
+              <span class="rw__eyebrow">2026 Factory Runway Showcase</span>
+              <h1 class="rw__title">Try the Look.</h1>
+              <p class="rw__sub">Six signature wholesale saree looks straight from our looms. Drag to rotate or tap the center model to inspect pins.</p>
+            </div>
+
+            <div class="rw__stage" id="rwStage">
+              <div class="rw__actors" id="rwActors"></div>
+              <div class="rw__heroes" id="rwHeroes"></div>
+              <span class="rw__sweep"></span>
+              <span class="rw__cursor" id="rwCursor">
+                <span class="rw__cursor-in">
+                  <span class="rw__cursor-label rw__cursor-drag">Drag</span>
+                  <span class="rw__cursor-label rw__cursor-view">View</span>
+                </span>
+              </span>
+              <span class="rw__walk"><span class="rw__walk-line"></span></span>
+            </div>
+
+            <div class="rw__controls">
+              <button type="button" class="rw__icon" onclick="rwPrev()" aria-label="Previous look">
+                <svg width="24" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M25 7H1M7 1L1 7l6 6"/></svg>
+              </button>
+              <div class="rw__ticks" id="rwTicks"></div>
+              <button type="button" class="rw__icon rw__auto is-playing" id="rwAutoBtn" onclick="rwTogglePlay()" aria-label="Autoplay">
+                <svg class="rw__play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg>
+                <svg class="rw__pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 4.5h3.5v15H6.5zM14 4.5h3.5v15H14z"/></svg>
+              </button>
+              <button type="button" class="rw__icon" onclick="rwNext()" aria-label="Next look">
+                <svg width="24" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 7h24M19 1l6 6-6 6"/></svg>
+              </button>
+            </div>
+
+            <!-- Lightbox Popup -->
+            <div class="rw__lb" id="rwLightbox">
+              <div class="rw__lb-stage" id="rwLbStage" onclick="if(event.target===this) rwCloseZoom()"></div>
+              <div class="rw__lb-top">
+                <p style="margin:0;">
+                  <span class="rw__lb-kicker" id="rwLbKicker"></span>
+                  <span class="rw__lb-name" id="rwLbName"></span>
+                </p>
+                <button type="button" class="rw__lb-close" onclick="rwCloseZoom()">✕</button>
+              </div>
+              <p class="rw__lb-hint">Tap numbered pin to highlight piece details</p>
+            </div>
+          </div>
+
+          <aside class="rw__panel" id="rwPanelWrap">
+            <div class="rw__panel-inner">
+              <div class="rw__panel-head">
+                <h2 class="rw__panel-title">In this look</h2>
+                <span class="rw__label">Factory B2B</span>
+              </div>
+              <div class="rw__look-panel" id="rwRightPanel"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Dark Trust Strip -->
+  <section style="background:#231B17;color:#F6ECE3;padding:24px;">
+    <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;">
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:20px;color:#B68D52;">✦</span>
+        <div>
+          <strong style="display:block;font-size:14px;color:#fff;">Direct Factory Pricing</strong>
+          <span style="font-size:12.5px;color:#C6B9AE;">Zero middlemen. Pure loom-to-showroom margins for boutiques.</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:20px;color:#B68D52;">📦</span>
+        <div>
+          <strong style="display:block;font-size:14px;color:#fff;">Insured Transport Dispatch</strong>
+          <span style="font-size:12.5px;color:#C6B9AE;">48-hour parcel dispatch across all Indian states &amp; worldwide export.</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:20px;color:#B68D52;">🏭</span>
+        <div>
+          <strong style="display:block;font-size:14px;color:#fff;">Custom Bulk Weaving</strong>
+          <span style="font-size:12.5px;color:#C6B9AE;">Custom dye shades &amp; showroom branding available on bulk lots.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Editorial Categories -->
+  <section class="container" style="padding-top:64px;padding-bottom:64px;">
+    <div style="margin-bottom:28px;">
+      <div class="eyebrow">The Wholesale Wardrobe</div>
+      <h2 class="serif-heading" style="font-size:clamp(30px,4vw,44px);">A saree for every showroom.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;">
+      <div onclick="jumpToCategory('Cotton & Linen')" style="cursor:pointer;">
+        <div style="aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#eadfd5;margin-bottom:12px;">
+          <img src="https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Everyday Poetry" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <h3 class="serif-heading" style="font-size:25px;font-weight:600;">Everyday poetry</h3>
+            <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Light Cottons &amp; Linens</span>
+          </div>
+          <span style="font-size:20px;color:var(--accent-red);">→</span>
+        </div>
+      </div>
+
+      <div onclick="jumpToCategory('Banarasi Silk')" style="cursor:pointer;">
+        <div style="aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#eadfd5;margin-bottom:12px;">
+          <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=85" alt="Silk Stories" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <h3 class="serif-heading" style="font-size:25px;font-weight:600;">Silk stories</h3>
+            <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Timeless Banarasi &amp; Zari</span>
+          </div>
+          <span style="font-size:20px;color:var(--accent-red);">→</span>
+        </div>
+      </div>
+
+      <div onclick="jumpToCategory('Bridal & Festive')" style="cursor:pointer;">
+        <div style="aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#eadfd5;margin-bottom:12px;">
+          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85" alt="Celebration Edit" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <h3 class="serif-heading" style="font-size:25px;font-weight:600;">Celebration edit</h3>
+            <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Bridal &amp; Festive Looms</span>
+          </div>
+          <span style="font-size:20px;color:var(--accent-red);">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Filterable Factory Wholesale Catalog -->
+  <section id="catalog" style="background:var(--bg-blush);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);padding:64px 0;">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:24px;">
+        <div>
+          <div class="eyebrow">Direct Manufacturer Catalog</div>
+          <h2 class="serif-heading" id="catalogHeading" style="font-size:clamp(30px,4vw,44px);">All Wholesale Designs</h2>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <input type="text" id="searchInput" placeholder="Search SKU (VV-101), silk, fabric..." oninput="renderCatalog()" style="padding:10px 16px;border-radius:999px;border:1px solid var(--border-soft);background:#fff;font-size:13px;min-width:220px;">
+          <select id="sortSelect" onchange="renderCatalog()" style="padding:10px 14px;border-radius:8px;border:1px solid var(--border-soft);background:#fff;font-size:13px;">
+            <option value="featured">Sort: Featured Looms</option>
+            <option value="low">Rate: Low to High</option>
+            <option value="high">Rate: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="catPills" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;"></div>
+      <div id="catalogGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:24px;"></div>
+    </div>
+  </section>
+
+  <!-- 5. Factory Story -->
+  <section class="container" style="padding-top:68px;padding-bottom:68px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center;">
+      <div>
+        <div class="eyebrow">Our Weaving Legacy</div>
+        <h2 class="serif-heading" style="font-size:clamp(32px,4vw,46px);margin-bottom:14px;">For moments that become showroom bestsellers.</h2>
+        <p style="color:var(--text-muted);font-size:15px;margin-bottom:24px;">
+          Operating 120+ looms across Varanasi and Surat, VastraVani delivers consistent wholesale quality, genuine zari work, and fast 48-hour transport dispatch for boutique owners and saree showrooms.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="btn-crimson" onclick="openCheckoutModal()">Bulk Order Desk →</button>
+          <button type="button" class="btn-outline" onclick="openAdminModal()">Owner: Upload Saree Photo</button>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#eadfd5;">
+        <img src="https://images.unsplash.com/photo-1728544845420-6d5a610fc890?auto=format&fit=crop&w=1200&q=85" alt="VastraVani Looms" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#231B17;color:#E8DDD3;padding:56px 24px 28px;">
+    <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.1);">
+      <div>
+        <div style="font-family:var(--font-serif);font-size:30px;font-style:italic;color:#fff;">VastraVani</div>
+        <p style="font-size:13.5px;color:#B9ABA0;margin-top:10px;max-width:300px;">
+          Direct manufacturer of pure Banarasi, Bridal Zari, Organza &amp; Handloom Cotton sarees. Supplying 450+ showrooms across India.
+        </p>
+      </div>
+      <div>
+        <h4 style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#B68D52;margin-bottom:12px;">Wholesale Desk</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13.5px;">
+          <li><a href="#runway">3D Runway Showcase</a></li>
+          <li><a href="#catalog">All Factory Designs</a></li>
+          <li><a href="#" onclick="openCheckoutModal();return false;">Submit Bulk Order</a></li>
+          <li><a href="#" onclick="openTrackModal();return false;">Track Dispatch Status</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#B68D52;margin-bottom:12px;">Manufacturer Portal</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13.5px;">
+          <li><a href="#" onclick="openAdminModal();return false;">Owner Dashboard (PIN: 1234)</a></li>
+          <li><a href="#" onclick="openAdminModal('upload');return false;">Upload New Saree Photo</a></li>
+          <li><a href="#" onclick="openAdminModal('orders');return false;">Manage B2B Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#B68D52;margin-bottom:12px;">Weaving Hubs</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:13px;color:#CBBFB5;">
+          <li>Madanpura Handloom Cluster, Varanasi</li>
+          <li>Ring Road Textile Market, Surat</li>
+          <li>B2B WhatsApp: +91 98765 43210</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#9C8E83;">
+      <span>© 2026 VastraVani Heritage Looms Pvt. Ltd.</span>
+      <span>100% B2B Direct Manufacturer Portal</span>
+    </div>
+  </footer>
+
+  <!-- Wholesale Bag Drawer -->
+  <div class="bag-backdrop" id="bagBackdrop" onclick="if(event.target===this) closeBag()">
+    <div class="bag-drawer">
+      <div style="padding:20px 24px;background:#fff;border-bottom:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <h3 class="serif-heading" style="font-size:26px;font-weight:600;">Wholesale Bag</h3>
+          <span style="font-size:12px;color:var(--text-muted);" id="drawerBagPcs">0 Total Pieces</span>
+        </div>
+        <button onclick="closeBag()" style="background:none;border:0;font-size:22px;cursor:pointer;">✕</button>
+      </div>
+      <div id="bagItemsList" style="flex:1;overflow-y:auto;padding:20px 24px;display:flex;flex-direction:column;gap:14px;"></div>
+      <div id="bagFooter" style="padding:20px 24px;background:#fff;border-top:1px solid var(--border-soft);"></div>
+    </div>
+  </div>
+
+  <!-- Saree Detail Modal (Multi-Photo Gallery) -->
+  <div class="modal-backdrop" id="detailModal" onclick="if(event.target===this) closeDetailModal()">
+    <div class="modal-card" id="detailModalBody"></div>
+  </div>
+
+  <!-- B2B Checkout Modal -->
+  <div class="modal-backdrop" id="checkoutModal" onclick="if(event.target===this) closeCheckoutModal()">
+    <div class="modal-card" id="checkoutModalBody"></div>
+  </div>
+
+  <!-- Order Tracking Modal -->
+  <div class="modal-backdrop" id="trackModal" onclick="if(event.target===this) closeTrackModal()">
+    <div class="modal-card" style="max-width:560px;" id="trackModalBody"></div>
+  </div>
+
+  <!-- Owner Admin Modal (PIN: 1234) -->
+  <div class="modal-backdrop" id="adminModal" onclick="if(event.target===this) closeAdminModal()">
+    <div class="modal-card" id="adminModalBody"></div>
+  </div>
+
+  <div class="vv-toast" id="vvToast"></div>
+
+  <script>
+    const WHATSAPP_NUMBER = '919876543210'; // Apna WhatsApp number yahan daalein (91 ke saath)
+    const OWNER_PIN = '1234';
+
+    const DEFAULT_SAREES = [
+      {
+        id: '1', sku: 'VV-101', name: 'Gulabi Katan Banarasi Silk', category: 'Banarasi Silk',
+        fabric: 'Pure Mulberry Katan Silk • Antique Gold Zari', wholesale_price: 5400, moq: 5,
+        set_description: '5 Assorted Colors Set • 6.3m with Blouse Piece',
+        description: 'Direct from our Varanasi handlooms. Intricate kadhua floral motifs woven in antique gold zari on pure mulberry katan silk.',
+        model_image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85',
+        gallery_images: [
+          'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85',
+          'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=85',
+          'https://images.pexels.com/photos/7622570/pexels-photo-7622570.jpeg?auto=compress&cs=tinysrgb&w=900'
+        ],
+        is_runway: true, runway_order: 1, badge: 'Bestseller', pin: [48, 38],
+        pack_options: ['5-Pc Assorted Set', '5-Pc Single Color', '10-Pc Showroom Lot']
+      },
+      {
+        id: '2', sku: 'VV-102', name: 'Sindoori Bridal Zari Saree', category: 'Bridal & Festive',
+        fabric: 'Heavy Bridal Silk • Copper & Gold Zari', wholesale_price: 7800, moq: 3,
+        set_description: '3 Bridal Shades Set • 6.3m with Heavy Blouse',
+        description: 'High-margin bridal collection crafted for wedding season demand. Rich crimson drape with heavy pallu weaving.',
+        model_image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85',
+        gallery_images: [
+          'https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85',
+          'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=85'
+        ],
+        is_runway: true, runway_order: 2, badge: 'New Arrival', pin: [50, 42],
+        pack_options: ['3-Pc Bridal Set', '6-Pc Showroom Lot', 'Custom Color Weaving']
+      },
+      {
+        id: '3', sku: 'VV-103', name: 'Ivory Kasavu Heritage Cotton', category: 'Cotton & Linen',
+        fabric: 'Handspun Mulmul Cotton • Temple Zari Border', wholesale_price: 1950, moq: 10,
+        set_description: '10 Pcs Bundle • 6.3m with Running Blouse',
+        description: 'Fast-moving summer and festive cotton catalog. Breathable handloom mulmul with authentic temple gold border.',
+        model_image: 'https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=900',
+        gallery_images: [
+          'https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=900',
+          'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85'
+        ],
+        is_runway: true, runway_order: 3, badge: 'Fast Moving', pin: [48, 46],
+        pack_options: ['10-Pc Standard Lot', '20-Pc Wholesale Bale']
+      },
+      {
+        id: '4', sku: 'VV-104', name: 'Chandni Golden Tissue Organza', category: 'Organza & Tissue',
+        fabric: 'Pure Silk Tissue Organza • Scalloped Zari', wholesale_price: 4100, moq: 5,
+        set_description: '5 Pastel Shades Set • 6.3m with Designer Blouse',
+        description: 'Trending boutique favorite for sangeet & cocktail buyers. Featherlight shimmering tissue organza.',
+        model_image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85',
+        gallery_images: [
+          'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85',
+          'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=85'
+        ],
+        is_runway: true, runway_order: 4, badge: 'New Arrival', pin: [50, 38],
+        pack_options: ['5-Pc Pastel Set', '10-Pc Boutique Lot']
+      },
+      {
+        id: '5', sku: 'VV-105', name: 'Panna Green Meenakari Silk', category: 'Banarasi Silk',
+        fabric: 'Banarasi Khaddi Georgette • Meenakari Weave', wholesale_price: 5900, moq: 4,
+        set_description: '4 Jewel Tones Set • 6.3m with Brocade Blouse',
+        description: 'Emerald khaddi georgette woven with multi-color meenakari jaal across the body and grand pallu.',
+        model_image: 'https://images.unsplash.com/photo-1728544845420-6d5a610fc890?auto=format&fit=crop&w=900&q=85',
+        gallery_images: [
+          'https://images.unsplash.com/photo-1728544845420-6d5a610fc890?auto=format&fit=crop&w=900&q=85',
+          'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85'
+        ],
+        is_runway: true, runway_order: 5, badge: 'Limited Loom', pin: [48, 40],
+        pack_options: ['4-Pc Jewel Set', '8-Pc Showroom Lot']
+      },
+      {
+        id: '6', sku: 'VV-106', name: 'Noorani Pastel Chanderi Silk', category: 'Organza & Tissue',
+        fabric: 'Chanderi Silk Organza • Subtle Zari Booti', wholesale_price: 3350, moq: 6,
+        set_description: '6 Pastel Shades Set • 6.3m with Contrast Blouse',
+        description: 'Effortless lightweight Chanderi organza weave with subtle zari bootis. Consistent year-round seller.',
+        model_image: 'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=85',
+        gallery_images: [
+          'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=900&q=85',
+          'https://images.unsplash.com/photo-1728544845892-32ab2a35f16c?auto=format&fit=crop&w=900&q=85'
+        ],
+        is_runway: true, runway_order: 6, badge: 'Bestseller', pin: [49, 42],
+        pack_options: ['6-Pc Pastel Set', '12-Pc Wholesale Lot']
+      },
+      {
+        id: '7', sku: 'VV-107', name: 'Kashi Temple Border Tussar', category: 'Bridal & Festive',
+        fabric: 'Pure Tussar Silk • Traditional Temple Border', wholesale_price: 4850, moq: 5,
+        set_description: '5 Festive Shades Set • 6.3m with Blouse',
+        description: 'Traditional temple-inspired woven borders crafted by 3rd-generation master artisans.',
+        model_image: 'https://images.unsplash.com/photo-1728544845892-32ab2a35f16c?auto=format&fit=crop&w=900&q=85',
+        gallery_images: ['https://images.unsplash.com/photo-1728544845892-32ab2a35f16c?auto=format&fit=crop&w=900&q=85'],
+        is_runway: false, runway_order: 7, badge: 'Heritage', pin: [50, 40],
+        pack_options: ['5-Pc Festive Set', '10-Pc Bulk Lot']
+      },
+      {
+        id: '8', sku: 'VV-108', name: 'Sufi Bhagalpuri Linen Zari', category: 'Cotton & Linen',
+        fabric: 'Pure Organic Linen • Silver Zari Stripes', wholesale_price: 2350, moq: 8,
+        set_description: '8 Earthy Shades Set • 6.3m with Blouse',
+        description: 'Crisp yet soft organic linen weave with minimal silver zari stripes—ideal for boutique clientele.',
+        model_image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=85',
+        gallery_images: ['https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=85'],
+        is_runway: false, runway_order: 8, badge: 'New Arrival', pin: [50, 40],
+        pack_options: ['8-Pc Assorted Set', '16-Pc Showroom Lot']
+      }
+    ];
+
+    let sarees = JSON.parse(localStorage.getItem('vv_gh_sarees_v1')) || JSON.parse(JSON.stringify(DEFAULT_SAREES));
+    let bag = JSON.parse(localStorage.getItem('vv_gh_bag_v1')) || [];
+    let orders = JSON.parse(localStorage.getItem('vv_gh_orders_v1')) || [];
+    let adminAuthed = localStorage.getItem('vv_gh_admin') === 'true';
+    let currentCategory = 'All';
+
+    const fmtINR = n => '₹' + Math.round(n).toLocaleString('en-IN');
+
+    function showToast(msg) {
+      const t = document.getElementById('vvToast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._tm);
+      t._tm = setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    function saveSarees() {
+      localStorage.setItem('vv_gh_sarees_v1', JSON.stringify(sarees));
+      initRunway();
+      renderCatalog();
+    }
+
+    function saveBag() {
+      localStorage.setItem('vv_gh_bag_v1', JSON.stringify(bag));
+      updateBagBadge();
+    }
+
+    function updateBagBadge() {
+      const pcs = bag.reduce((s, i) => s + i.sets * i.moq, 0);
+      document.getElementById('navBagPcs').textContent = pcs;
+      const dEl = document.getElementById('drawerBagPcs');
+      if (dEl) dEl.textContent = `${pcs} Total Pieces`;
+    }
+
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    /* ================= 3D RUNWAY ENGINE ================= */
+    let rwLooks = [], rwIndex = 0, rwTarget = 0, rwCur = -1.15, rwVel = 0;
+    let rwPlaying = true, rwZoomed = false, rwDragging = false, rwStill = false;
+    let rwHotPin = null, rwPicking = false, rwSelectedPack = '', rwAdded = {};
+    let rwBodies = [], rwW = 900, rwH = 500, rwUnit = 260, rwFs = 1.08, rwMob = false;
+    let rwRaf = 0, rwLastT = 0, rwPanelHover = false, rwEngaged = false, rwSuppressUntil = 0;
+
+    function initRunway() {
+      const rList = sarees.filter(s => s.is_runway).sort((a, b) => a.runway_order - b.runway_order).slice(0, 6);
+      rwLooks = rList.length >= 2 ? rList : sarees.slice(0, 6);
+      if (rwIndex >= rwLooks.length) rwIndex = 0;
+      rwSelectedPack = rwLooks[rwIndex]?.pack_options[0] || '';
+
+      const actors = document.getElementById('rwActors');
+      const heroes = document.getElementById('rwHeroes');
+      const ticks = document.getElementById('rwTicks');
+      actors.innerHTML = ''; heroes.innerHTML = ''; ticks.innerHTML = '';
+      rwBodies = [];
+
+      const N = rwLooks.length;
+      const totalBodies = Math.ceil(8 / N) * N;
+      for (let a = 0; a < totalBodies; a++) {
+        const look = rwLooks[a % N];
+        const el = document.createElement('div');
+        el.className = 'rw__model';
+        el.innerHTML = `<span class="rw__shadow"></span><div class="rw__figure"><div class="rw__art"><img src="${look.model_image}" alt="${look.name}" draggable="false"><button class="rw__hit" data-go="${a % N}"></button></div></div>`;
+        actors.appendChild(el);
+        rwBodies.push({ el, a, blur: -1, w: 280 });
+      }
+
+      rwLooks.forEach((look, i) => {
+        const h = document.createElement('div');
+        h.className = 'rw__hero' + (i === rwIndex ? ' is-on' : '');
+        h.innerHTML = `<div class="rw__figure"><div class="rw__art"><img src="${look.model_image}" alt="${look.name}" draggable="false"><button class="rw__zoom" data-rw-zoom onclick="rwOpenZoom()"></button></div></div>`;
+        heroes.appendChild(h);
+
+        const tk = document.createElement('button');
+        tk.className = 'rw__tick' + (i === rwIndex && rwPlaying ? ' is-run' : '');
+        tk.setAttribute('aria-current', i === rwIndex ? 'true' : 'false');
+        tk.onclick = () => rwGoTo(i);
+        tk.innerHTML = `<span class="rw__tick-bar"></span><span class="rw__tick-label">0${i + 1}<span class="rw__tick-name">&nbsp;&nbsp;${look.name}</span></span>`;
+        ticks.appendChild(tk);
+      });
+
+      rwMeasure();
+      renderRwPanel();
+      rwKick();
+    }
+
+    function rwMeasure() {
+      const stage = document.getElementById('rwStage');
+      const rect = stage.getBoundingClientRect();
+      rwMob = window.innerWidth < 900;
+      rwW = rect.width || window.innerWidth;
+      rwH = rect.height || 480;
+      rwFs = rwMob ? 1 : 1.08;
+      rwUnit = rwMob ? Math.max(90, rwW * 0.35) : Math.max(120, 0.3 * rwW);
+      const mh = rwMob ? Math.max(210, Math.round(rwH - 40)) : Math.max(230, Math.round((rwH - 48) / 1.08));
+      stage.style.setProperty('--rw-model-h', mh + 'px');
+      stage.style.setProperty('--rw-hx', rwMob ? '50%' : (0.5 * rwW) + 'px');
+      stage.style.setProperty('--rw-hy', rwMob ? '18px' : '28px');
+      rwBodies.forEach(b => { b.w = b.el.offsetWidth || mh * 0.5625; });
+    }
+
+    function rwPut(b, x, bottom, scale, op, blur, z) {
+      if (x + (b.w * scale) / 2 < -10 || x - (b.w * scale) / 2 > rwW + 10) op = 0;
+      b.el.style.transform = `translate3d(${x.toFixed(1)}px, ${(-bottom).toFixed(1)}px, 0) translateX(-50%) scale(${scale.toFixed(4)})`;
+      b.el.style.opacity = op.toFixed(3);
+      b.el.style.zIndex = z;
+      b.el.style.visibility = op < 0.01 ? 'hidden' : 'visible';
+      b.el.style.pointerEvents = op < 0.5 ? 'none' : 'auto';
+      const br = Math.round(blur * 10) / 10;
+      if (b.blur !== br) { b.blur = br; b.el.style.filter = br <= 0.05 ? '' : `blur(${br}px)`; }
+    }
+
+    function rwRenderBodies() {
+      const N = rwBodies.length;
+      if (!N) return;
+      if (!rwMob) {
+        const cx = 0.5 * rwW, R = 0.62 * rwW, P = 1.65 * rwW, floor = rwH - 28, horizon = 0.36 * rwH, step = (2 * Math.PI) / N;
+        rwBodies.forEach(b => {
+          let phi = ((b.a - rwCur) * step) % (2 * Math.PI);
+          if (phi > Math.PI) phi -= 2 * Math.PI;
+          if (phi <= -Math.PI) phi += 2 * Math.PI;
+          const z = R * (1 - Math.cos(phi)), persp = P / (P + z), sl = Math.abs(phi) / step;
+          const scale = persp * (1 + (rwFs - 1) * Math.max(0, Math.min(1, 1 - sl)));
+          const x = cx + R * Math.sin(phi) * persp, bottom = rwH - (horizon + (floor - horizon) * persp);
+          const blur = sl <= 1 ? 1.8 * sl : Math.min(1.8 + (sl - 1) * 2, 6.5);
+          let op = Math.max(0, Math.min(1, (Math.cos(phi) + 0.55) / 0.3));
+          if (rwStill && sl < 0.02) op = 0;
+          rwPut(b, x, bottom, scale, op, blur, Math.round(scale * 1000));
+        });
+      } else {
+        const wrapN = v => ((v % N) + N) % N;
+        rwBodies.forEach(b => {
+          const k = wrapN(b.a - rwCur), slot = k > N / 2 ? k - N : k;
+          if (slot < -1.2 || slot > 3.2) return rwPut(b, -999, 0, 0.5, 0, 0, 0);
+          const x = rwW * (0.5 + slot * 0.42), bottom = 18 + Math.abs(slot) * 18, scale = Math.pow(0.78, Math.abs(slot));
+          let op = Math.max(0, 1 - Math.abs(slot) * 0.28);
+          if (rwStill && Math.abs(slot) < 0.03) op = 0;
+          rwPut(b, x, bottom, scale, op, Math.min(Math.abs(slot) * 1.4, 4), 1000 - Math.round(Math.abs(slot) * 50));
+        });
+      }
+    }
+
+    function rwKick() {
+      if (rwRaf) return;
+      rwLastT = 0;
+      const K = 95, C = 2 * Math.sqrt(K);
+      const tick = now => {
+        rwRaf = 0;
+        const dt = rwLastT ? Math.min(0.034, (now - rwLastT) / 1000) : 1 / 60;
+        rwLastT = now;
+        let moving = false;
+        const h = dt / 3;
+        for (let s = 0; s < 3; s++) {
+          const acc = -K * (rwCur - rwTarget) - C * rwVel;
+          rwVel += acc * h; rwCur += rwVel * h;
+        }
+        if (Math.abs(rwCur - rwTarget) <= 0.0005 && Math.abs(rwVel) <= 0.0005 && !rwDragging) {
+          rwCur = rwTarget; rwVel = 0;
+        } else moving = true;
+        rwStill = !moving && !rwDragging;
+        document.getElementById('runwayRoot').classList.toggle('rw--still', rwStill);
+        rwRenderBodies();
+        if (moving || rwDragging) rwRaf = requestAnimationFrame(tick);
+      };
+      rwRaf = requestAnimationFrame(tick);
+    }
+
+    function rwMoveTo(T) {
+      if (!rwLooks.length) return;
+      rwTarget = T; rwStill = false;
+      const root = document.getElementById('runwayRoot');
+      root.classList.remove('rw--still');
+      const L = rwLooks.length;
+      rwIndex = ((T % L) + L) % L;
+      rwZoomed = false; rwHotPin = null; rwPicking = false;
+      rwSelectedPack = rwLooks[rwIndex].pack_options[0];
+      root.classList.remove('rw--zoom');
+      root.style.setProperty('--rw-progress', ((rwIndex + 1) / L).toFixed(3));
+
+      document.querySelectorAll('#rwHeroes .rw__hero').forEach((h, i) => h.classList.toggle('is-on', i === rwIndex));
+      document.querySelectorAll('#rwTicks .rw__tick').forEach((t, i) => {
+        t.setAttribute('aria-current', i === rwIndex ? 'true' : 'false');
+        t.classList.toggle('is-past', i < rwIndex);
+        t.classList.remove('is-run');
+        if (i === rwIndex && rwPlaying) { void t.offsetWidth; t.classList.add('is-run'); }
+      });
+
+      const st = document.getElementById('rwStage');
+      st.classList.remove('is-sweep'); void st.offsetWidth; st.classList.add('is-sweep');
+      renderRwPanel();
+      rwKick();
+    }
+
+    function rwNext() { rwMoveTo(Math.round(rwTarget) + 1); }
+    function rwPrev() { rwMoveTo(Math.round(rwTarget) - 1); }
+    function rwGoTo(i) {
+      let d = (i - rwIndex) % rwLooks.length;
+      if (d < 0) d += rwLooks.length;
+      if (d > rwLooks.length / 2) d -= rwLooks.length;
+      rwMoveTo(Math.round(rwTarget) + d);
+    }
+    function rwTogglePlay() {
+      rwEngaged = false; rwPlaying = !rwPlaying;
+      document.getElementById('runwayRoot').classList.toggle('is-playing', rwPlaying);
+      document.getElementById('rwAutoBtn').classList.toggle('is-playing', rwPlaying);
+      rwMoveTo(Math.round(rwTarget));
+    }
+
+    function rwOpenZoom() {
+      rwEngaged = true; rwPlaying = false;
+      document.getElementById('runwayRoot').classList.remove('is-playing');
+      document.getElementById('rwAutoBtn').classList.remove('is-playing');
+      rwZoomed = true;
+      const cur = rwLooks[rwIndex];
+      document.getElementById('rwLbKicker').textContent = `Look 0${rwIndex + 1} • ${cur.sku}`;
+      document.getElementById('rwLbName').textContent = cur.name;
+      document.getElementById('rwLbStage').innerHTML = `
+        <div class="rw__lb-model">
+          <div class="rw__art">
+            <img src="${cur.model_image}" alt="${cur.name}">
+            <div class="rw__pins">
+              <button type="button" class="rw__pin ${rwHotPin===1?'is-hot':''}" data-tip="${cur.name} (${fmtINR(cur.wholesale_price)}/pc)" style="left:${cur.pin[0]}%;top:${cur.pin[1]}%" onclick="rwSetHot(1)"><span class="rw__pin-dot">1</span></button>
+              <button type="button" class="rw__pin ${rwHotPin===2?'is-hot':''}" data-tip="Matching Unstitched Blouse Included" style="left:${Math.min(72, cur.pin[0]+7)}%;top:24%" onclick="rwSetHot(2)"><span class="rw__pin-dot">2</span></button>
+            </div>
+          </div>
+        </div>`;
+      document.getElementById('runwayRoot').classList.add('rw--zoom');
+    }
+    function rwCloseZoom() {
+      rwZoomed = false;
+      document.getElementById('runwayRoot').classList.remove('rw--zoom');
+    }
+    function rwSetHot(n) {
+      rwHotPin = n;
+      rwOpenZoom();
+      renderRwPanel();
+    }
+
+    function renderRwPanel() {
+      const cur = rwLooks[rwIndex];
+      if (!cur) return;
+      const setTotal = cur.wholesale_price * cur.moq;
+      const isAdded = !!rwAdded[cur.id];
+      const panel = document.getElementById('rwRightPanel');
+      panel.className = 'rw__look-panel' + (isAdded ? ' is-complete' : '');
+      panel.innerHTML = `
+        <div class="rw__mhead"><span class="rw__mhead-title">${cur.name}</span><span class="rw__label">${cur.sku}</span></div>
+        <ul class="rw__items">
+          <li class="rw__item ${rwPicking?'is-picking':''} ${isAdded?'is-added':''} ${rwHotPin===1?'is-hot':''}">
+            ${cur.badge ? `<span class="rw__tag">${cur.badge}</span>` : ''}
+            <div class="rw__media" onclick="openDetailModal('${cur.id}')"><img src="${cur.model_image}" alt="${cur.name}"><span class="rw__num">1</span></div>
+            <div class="rw__info">
+              <span class="rw__type">${cur.sku} • ${cur.category}</span>
+              <span class="rw__name" onclick="openDetailModal('${cur.id}')">${cur.name}</span>
+              <span class="rw__price"><span>${fmtINR(cur.wholesale_price)} / pc</span><span class="rw__moq-tag">MOQ: ${cur.moq} pcs</span></span>
+            </div>
+            <button type="button" class="rw__add" onclick="rwTogglePick()">${isAdded ? '✓' : '＋'}</button>
+            ${rwPicking && !isAdded ? `
+              <div class="rw__picker">
+                <div class="rw__opt-name">Select Wholesale Set Option</div>
+                <div class="rw__vals">
+                  ${cur.pack_options.map(opt => `
+                    <label class="rw__pill">
+                      <input type="radio" name="rwpack" ${rwSelectedPack===opt?'checked':''} onchange="rwSelectedPack='${opt}'">
+                      <span class="rw__pill-label">${opt}</span>
+                    </label>`).join('')}
+                </div>
+                <button type="button" class="rw__confirm" onclick="rwAddCurrentSet()">Confirm ${cur.moq}-Pc Set (${fmtINR(setTotal)})</button>
+              </div>` : ''}
+          </li>
+          <li class="rw__item ${rwHotPin===2?'is-hot':''}">
+            <div class="rw__media" onclick="openDetailModal('${cur.id}')"><img src="${cur.gallery_images[1] || cur.model_image}" alt="Specs"><span class="rw__num">2</span></div>
+            <div class="rw__info">
+              <span class="rw__type">Included With Saree</span>
+              <span class="rw__name" style="font-size:15px;" onclick="openDetailModal('${cur.id}')">${cur.set_description}</span>
+              <span class="rw__type" style="text-transform:none;letter-spacing:0;">${cur.fabric}</span>
+            </div>
+            <button type="button" onclick="openDetailModal('${cur.id}')" style="background:none;border:0;color:var(--accent-red);font-size:12px;font-weight:700;cursor:pointer;">Specs →</button>
+          </li>
+        </ul>
+        <div class="rw__bundle">
+          <div class="rw__bundle-row">
+            <div><span class="rw__bundle-title">1 Complete Wholesale Set (${cur.moq} Pcs)</span><span class="rw__bundle-note">Ex-Factory Rate • GST &amp; Transport Extra</span></div>
+            <div class="rw__bundle-price"><strong>${fmtINR(setTotal)}</strong></div>
+          </div>
+          <button type="button" class="rw__cta" onclick="rwAddCurrentSet()">${isAdded ? '✓ Added to Wholesale Bag' : `Add ${cur.moq}-Pc Set to Wholesale Bag →`}</button>
+        </div>`;
+    }
+
+    function rwTogglePick() { rwEngaged = true; rwPicking = !rwPicking; renderRwPanel(); }
+    function rwAddCurrentSet() {
+      const cur = rwLooks[rwIndex];
+      rwEngaged = true;
+      addItemToBag(cur, rwSelectedPack || cur.pack_options[0], 1);
+      rwAdded[cur.id] = true;
+      rwPicking = false;
+      renderRwPanel();
+    }
+
+    /* ================= CATALOG & DETAIL MODAL ================= */
+    const CATS = ['All', 'Banarasi Silk', 'Cotton & Linen', 'Bridal & Festive', 'Organza & Tissue'];
+
+    function jumpToCategory(cat) {
+      currentCategory = cat;
+      renderCatalog();
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function renderCatalog() {
+      const pills = document.getElementById('catPills');
+      pills.innerHTML = CATS.map(c => `
+        <button type="button" onclick="currentCategory='${c}';renderCatalog()" style="padding:9px 18px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;border:1px solid ${currentCategory===c?'#231B17':'var(--border-soft)'};background:${currentCategory===c?'#231B17':'#fff'};color:${currentCategory===c?'#fff':'var(--text-main)'};">${c}</button>
+      `).join('');
+
+      document.getElementById('catalogHeading').textContent = currentCategory === 'All' ? 'All Wholesale Designs' : currentCategory;
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const sort = document.getElementById('sortSelect').value;
+
+      let list = [...sarees];
+      if (currentCategory !== 'All') list = list.filter(s => s.category === currentCategory);
+      if (q) list = list.filter(s => s.name.toLowerCase().includes(q) || s.sku.toLowerCase().includes(q) || s.fabric.toLowerCase().includes(q));
+      if (sort === 'low') list.sort((a, b) => a.wholesale_price - b.wholesale_price);
+      if (sort === 'high') list.sort((a, b) => b.wholesale_price - a.wholesale_price);
+
+      const grid = document.getElementById('catalogGrid');
+      if (!list.length) {
+        grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;"><p class="serif-heading" style="font-size:24px;">No designs found.</p><button class="btn-crimson" style="margin-top:12px;" onclick="currentCategory='All';document.getElementById('searchInput').value='';renderCatalog()">Show All</button></div>`;
+        return;
+      }
+      grid.innerHTML = list.map(s => `
+        <div style="background:#fff;border-radius:10px;overflow:hidden;border:1px solid rgba(230,220,211,0.8);display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(35,27,23,0.04);">
+          <div onclick="openDetailModal('${s.id}')" style="position:relative;aspect-ratio:3/4;background:#f2e8df;overflow:hidden;cursor:pointer;">
+            <img src="${s.model_image}" alt="${s.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            ${s.badge ? `<span style="position:absolute;top:10px;left:10px;background:${s.badge==='New Arrival'?'var(--accent-red)':'#231B17'};color:#fff;font-size:10px;font-weight:700;padding:4px 9px;border-radius:4px;text-transform:uppercase;">${s.badge}</span>` : ''}
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;flex:1;">
+            <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;"><span>${s.sku}</span><span>${s.category}</span></div>
+            <h3 onclick="openDetailModal('${s.id}')" class="serif-heading" style="font-size:21px;font-weight:600;margin-bottom:6px;cursor:pointer;">${s.name}</h3>
+            <p style="font-size:12px;color:var(--text-muted);margin:0 0 12px;">${s.fabric}</p>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+              <strong style="font-size:16px;">${fmtINR(s.wholesale_price)} / pc</strong>
+              <span style="font-size:11px;background:#f6ece3;color:#7c5221;padding:2px 8px;border-radius:4px;font-weight:700;">MOQ: ${s.moq} pcs</span>
+            </div>
+            <button type="button" class="btn-crimson" style="margin-top:auto;width:100%;padding:10px;" onclick="quickAddSaree('${s.id}')">Add ${s.moq}-Pc Set (${fmtINR(s.wholesale_price * s.moq)})</button>
+          </div>
+        </div>`).join('');
+    }
+
+    function quickAddSaree(id) {
+      const s = sarees.find(x => x.id === id);
+      if (s) addItemToBag(s, s.pack_options[0], 1);
+    }
+
+    let detailSets = 1, detailPack = '';
+    function openDetailModal(id) {
+      const s = sarees.find(x => x.id === id);
+      if (!s) return;
+      detailSets = 1; detailPack = s.pack_options[0];
+      const photos = Array.from(new Set([s.model_image, ...(s.gallery_images || [])])).filter(Boolean);
+      const body = document.getElementById('detailModalBody');
+      body.innerHTML = `
+        <button class="modal-x" onclick="closeDetailModal()">✕</button>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;padding-top:8px;">
+          <div>
+            <div style="aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:#f2e8df;margin-bottom:10px;">
+              <img id="detailMainImg" src="${photos[0]}" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              ${photos.map(p => `<img src="${p}" onclick="document.getElementById('detailMainImg').src='${p}'" style="width:60px;height:76px;object-fit:cover;border-radius:6px;cursor:pointer;border:1px solid var(--border-soft);">`).join('')}
+            </div>
+          </div>
+          <div>
+            <div class="eyebrow">${s.sku} • ${s.category}</div>
+            <h2 class="serif-heading" style="font-size:32px;margin-bottom:10px;">${s.name}</h2>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+              <strong style="font-size:22px;">${fmtINR(s.wholesale_price)} / pc</strong>
+              <span style="background:#f6ece3;color:#7c5221;padding:3px 9px;border-radius:5px;font-size:11.5px;font-weight:700;">MOQ: ${s.moq} Pcs (1 Set)</span>
+            </div>
+            <p style="font-size:13.5px;color:var(--text-muted);margin-bottom:16px;">${s.description}</p>
+            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid var(--border-soft);font-size:12.5px;margin-bottom:16px;">
+              <div><strong>Fabric:</strong> ${s.fabric}</div>
+              <div style="margin-top:4px;"><strong>Packing:</strong> ${s.set_description}</div>
+            </div>
+            <div style="margin-bottom:14px;">
+              <div style="font-size:12px;font-weight:700;margin-bottom:6px;">Pack Option:</div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                ${s.pack_options.map((opt, idx) => `<button type="button" onclick="selectDetailPack(this,'${opt}')" class="btn-outline" style="padding:6px 12px;font-size:12px;${idx===0?'background:#231B17;color:#fff;':''}">${opt}</button>`).join('')}
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+              <span style="font-size:12px;font-weight:700;">Sets:</span>
+              <button type="button" class="btn-outline" style="padding:4px 12px;" onclick="updateDetailSets(-1,${s.moq},${s.wholesale_price})">−</button>
+              <strong id="detailSetsLbl">1 Set (${s.moq} Pcs)</strong>
+              <button type="button" class="btn-outline" style="padding:4px 12px;" onclick="updateDetailSets(1,${s.moq},${s.wholesale_price})">+</button>
+            </div>
+            <button type="button" id="detailAddBtn" class="btn-crimson" style="width:100%;margin-bottom:8px;" onclick="addItemToBag(sarees.find(x=>x.id==='${s.id}'), detailPack, detailSets);closeDetailModal();openBag();">
+              Add ${s.moq} Pcs (${fmtINR(s.wholesale_price * s.moq)})
+            </button>
+          </div>
+        </div>`;
+      document.getElementById('detailModal').classList.add('open');
+    }
+    function selectDetailPack(btn, opt) {
+      detailPack = opt;
+      btn.parentElement.querySelectorAll('button').forEach(b => { b.style.background = '#fff'; b.style.color = '#241c18'; });
+      btn.style.background = '#231B17'; btn.style.color = '#fff';
+    }
+    function updateDetailSets(d, moq, rate) {
+      detailSets = Math.max(1, detailSets + d);
+      document.getElementById('detailSetsLbl').textContent = `${detailSets} Set (${detailSets * moq} Pcs)`;
+      document.getElementById('detailAddBtn').textContent = `Add ${detailSets * moq} Pcs (${fmtINR(detailSets * moq * rate)})`;
+    }
+    function closeDetailModal() { document.getElementById('detailModal').classList.remove('open'); }
+
+    /* ================= BAG, WHATSAPP & CHECKOUT ================= */
+    function addItemToBag(s, packOption, sets) {
+      const ex = bag.find(b => b.id === s.id && b.pack_option === packOption);
+      if (ex) ex.sets += sets;
+      else bag.push({ id: s.id, sku: s.sku, name: s.name, model_image: s.model_image, wholesale_price: s.wholesale_price, moq: s.moq, sets, pack_option: packOption });
+      saveBag();
+      showToast(`${s.name} (${sets * s.moq} Pcs) added to bag`);
+    }
+
+    function openBag() { renderBag(); document.getElementById('bagBackdrop').classList.add('open'); }
+    function closeBag() { document.getElementById('bagBackdrop').classList.remove('open'); }
+
+    function renderBag() {
+      const list = document.getElementById('bagItemsList');
+      const foot = document.getElementById('bagFooter');
+      updateBagBadge();
+      if (!bag.length) {
+        list.innerHTML = `<div style="text-align:center;padding:60px 16px;color:var(--text-muted);"><p class="serif-heading" style="font-size:24px;">Your wholesale bag is empty</p><p style="font-size:13px;">Add any saree set from the 3D Runway or Catalog.</p></div>`;
+        foot.innerHTML = ''; return;
+      }
+      let totalAmt = 0, totalPcs = 0;
+      list.innerHTML = bag.map((b, idx) => {
+        const pcs = b.sets * b.moq, sub = pcs * b.wholesale_price;
+        totalAmt += sub; totalPcs += pcs;
+        return `
+          <div style="display:flex;gap:12px;background:#fff;padding:12px;border-radius:10px;border:1px solid var(--border-soft);">
+            <img src="${b.model_image}" style="width:68px;height:86px;object-fit:cover;border-radius:6px;flex-shrink:0;">
+            <div style="flex:1;">
+              <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text-muted);">${b.sku} • ${b.pack_option}</span><button onclick="bag.splice(${idx},1);saveBag();renderBag()" style="background:none;border:0;cursor:pointer;">🗑️</button></div>
+              <h4 class="serif-heading" style="font-size:18px;font-weight:600;">${b.name}</h4>
+              <div style="font-size:12px;color:var(--text-muted);margin:4px 0 8px;">${fmtINR(b.wholesale_price)}/pc × ${pcs} pcs</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div style="display:inline-flex;border:1px solid var(--border-soft);border-radius:6px;">
+                  <button onclick="bag[${idx}].sets--;if(bag[${idx}].sets<=0)bag.splice(${idx},1);saveBag();renderBag()" style="background:none;border:0;padding:3px 9px;cursor:pointer;">−</button>
+                  <span style="font-size:12px;font-weight:600;padding:3px 8px;">${b.sets} Set</span>
+                  <button onclick="bag[${idx}].sets++;saveBag();renderBag()" style="background:none;border:0;padding:3px 9px;cursor:pointer;">+</button>
+                </div>
+                <strong>${fmtINR(sub)}</strong>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+      foot.innerHTML = `
+        <div style="display:flex;justify-content:space-between;font-size:15px;font-weight:700;margin-bottom:4px;"><span>Estimated Ex-Factory Total</span><span>${fmtINR(totalAmt)}</span></div>
+        <p style="font-size:11.5px;color:var(--text-muted);margin:0 0 12px;">Total Quantity: ${totalPcs} Sarees</p>
+        <button class="btn-crimson" style="width:100%;margin-bottom:8px;" onclick="closeBag();openCheckoutModal()">Submit Bulk Order Form →</button>
+        <button onclick="sendBagWhatsApp()" style="width:100%;background:#177844;color:#fff;border:0;border-radius:6px;padding:12px;font-size:13.5px;font-weight:600;cursor:pointer;">💬 Send Order on WhatsApp</button>`;
+    }
+
+    function sendBagWhatsApp(order) {
+      const list = order ? order.items : bag;
+      let msg = `Namaste VastraVani Looms!%0A*B2B WHOLESALE ORDER*%0A`;
+      if (order) msg += `Order ID: *${order.order_code}*%0AShop: *${order.business_name}* (${order.city_state})%0A`;
+      msg += `%0A*Designs:*%0A`;
+      let sum = 0, pcs = 0;
+      list.forEach((b, i) => {
+        const p = b.sets * b.moq, sub = p * b.wholesale_price; sum += sub; pcs += p;
+        msg += `${i + 1}. *${b.name}* (${b.sku}) - ${b.pack_option} | ${p} Pcs = ${fmtINR(sub)}%0A`;
+      });
+      msg += `%0A*Total:* ${pcs} Pcs • *${fmtINR(sum)}*`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+    }
+
+    function openCheckoutModal() {
+      const body = document.getElementById('checkoutModalBody');
+      if (!bag.length) {
+        body.innerHTML = `<button class="modal-x" onclick="closeCheckoutModal()">✕</button><div style="text-align:center;padding:40px;"><h2 class="serif-heading" style="font-size:28px;margin-bottom:10px;">Bag is empty</h2><p style="color:var(--text-muted);font-size:13px;">Add wholesale saree sets first to place an order.</p></div>`;
+      } else {
+        const totalAmt = bag.reduce((s, b) => s + b.sets * b.moq * b.wholesale_price, 0);
+        body.innerHTML = `
+          <button class="modal-x" onclick="closeCheckoutModal()">✕</button>
+          <div class="eyebrow">B2B Dispatch Desk</div>
+          <h2 class="serif-heading" style="font-size:32px;margin-bottom:16px;">Submit Wholesale Order (${fmtINR(totalAmt)})</h2>
+          <form onsubmit="submitOrder(event)" style="display:grid;gap:12px;">
+            <input required id="cBiz" placeholder="Shop / Boutique Name *" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <input required id="cName" placeholder="Buyer Name *" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+              <input required id="cPhone" type="tel" placeholder="WhatsApp Number *" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <input required id="cCity" placeholder="City & State *" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+              <input id="cGst" placeholder="GST Number (Optional)" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+            </div>
+            <textarea required id="cAddr" rows="2" placeholder="Full Transport / Delivery Address *" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;"></textarea>
+            <button type="submit" class="btn-crimson" style="padding:14px;">Confirm &amp; Place Wholesale Order →</button>
+          </form>`;
+      }
+      document.getElementById('checkoutModal').classList.add('open');
+    }
+    function closeCheckoutModal() { document.getElementById('checkoutModal').classList.remove('open'); }
+
+    function submitOrder(e) {
+      e.preventDefault();
+      const totalAmt = bag.reduce((s, b) => s + b.sets * b.moq * b.wholesale_price, 0);
+      const order = {
+        order_code: 'VV-B2B-' + Math.floor(1000 + Math.random() * 9000),
+        business_name: document.getElementById('cBiz').value.trim(),
+        buyer_name: document.getElementById('cName').value.trim(),
+        phone: document.getElementById('cPhone').value.trim(),
+        city_state: document.getElementById('cCity').value.trim(),
+        gst_number: document.getElementById('cGst').value.trim(),
+        full_address: document.getElementById('cAddr').value.trim(),
+        items: [...bag],
+        total_amount: totalAmt,
+        status: 'Pending',
+        tracking_info: '',
+        created_at: new Date().toISOString()
+      };
+      orders.unshift(order);
+      localStorage.setItem('vv_gh_orders_v1', JSON.stringify(orders));
+      bag = []; saveBag();
+
+      document.getElementById('checkoutModalBody').innerHTML = `
+        <button class="modal-x" onclick="closeCheckoutModal()">✕</button>
+        <div style="text-align:center;padding:24px 8px;">
+          <div style="font-size:44px;margin-bottom:10px;">✅</div>
+          <div class="eyebrow">Order Recorded</div>
+          <h2 class="serif-heading" style="font-size:32px;margin-bottom:8px;">Thank you, ${order.business_name}!</h2>
+          <p style="font-size:14px;color:var(--text-muted);">Order Reference Code: <strong style="color:#151413;font-size:18px;">${order.order_code}</strong></p>
+          <button onclick='sendBagWhatsApp(${JSON.stringify(order).replace(/'/g, "&apos;")})' style="background:#177844;color:#fff;border:0;border-radius:6px;padding:13px 22px;font-weight:600;cursor:pointer;margin-top:12px;">💬 Send Confirmation on WhatsApp</button>
+        </div>`;
+    }
+
+    function openTrackModal() {
+      document.getElementById('trackModalBody').innerHTML = `
+        <button class="modal-x" onclick="closeTrackModal()">✕</button>
+        <div class="eyebrow">Dispatch Tracker</div>
+        <h2 class="serif-heading" style="font-size:30px;margin-bottom:14px;">Track Wholesale Parcel</h2>
+        <form onsubmit="runTrack(event)" style="display:grid;gap:10px;margin-bottom:16px;">
+          <input required id="tCode" placeholder="Order ID (e.g. VV-B2B-1234)" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+          <input required id="tPhone" placeholder="Registered Phone Number" style="padding:11px;border:1px solid var(--border-soft);border-radius:8px;">
+          <button type="submit" class="btn-crimson">Check Status</button>
+        </form>
+        <div id="trackRes"></div>`;
+      document.getElementById('trackModal').classList.add('open');
+    }
+    function closeTrackModal() { document.getElementById('trackModal').classList.remove('open'); }
+    function runTrack(e) {
+      e.preventDefault();
+      const code = document.getElementById('tCode').value.trim().toLowerCase();
+      const ph = document.getElementById('tPhone').value.replace(/\D/g, '').slice(-4);
+      const found = orders.find(o => o.order_code.toLowerCase() === code && o.phone.replace(/\D/g, '').endsWith(ph));
+      document.getElementById('trackRes').innerHTML = found
+        ? `<div style="background:#fff;padding:16px;border-radius:10px;border:1px solid var(--border-soft);"><strong>${found.order_code}</strong> — <span style="background:#231B17;color:#F4D8AE;padding:2px 10px;border-radius:999px;font-size:12px;">${found.status}</span><p style="font-size:13px;margin:8px 0 4px;">${found.business_name} (${found.city_state}) • ${fmtINR(found.total_amount)}</p>${found.tracking_info ? `<div style="font-size:12.5px;background:#f6ece3;padding:8px;border-radius:6px;"><strong>LR / Tracking:</strong> ${found.tracking_info}</div>` : ''}</div>`
+        : `<p style="color:var(--accent-red);font-size:13px;font-weight:600;">No matching order found.</p>`;
+    }
+
+    /* ================= OWNER ADMIN PANEL (PIN: 1234) ================= */
+    let adminTab = 'inventory';
+    function openAdminModal(tab) {
+      if (tab) adminTab = tab;
+      renderAdminModal();
+      document.getElementById('adminModal').classList.add('open');
+    }
+    function closeAdminModal() { document.getElementById('adminModal').classList.remove('open'); }
+
+    function renderAdminModal() {
+      const body = document.getElementById('adminModalBody');
+      if (!adminAuthed) {
+        body.innerHTML = `
+          <button class="modal-x" onclick="closeAdminModal()">✕</button>
+          <div style="max-width:360px;margin:20px auto;text-align:center;">
+            <div class="eyebrow">Manufacturer Portal</div>
+            <h2 class="serif-heading" style="font-size:30px;margin-bottom:8px;">Owner Admin Login</h2>
+            <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">Demo PIN: <strong>1234</strong></p>
+            <form onsubmit="if(document.getElementById('admPin').value==='${OWNER_PIN}'){adminAuthed=true;localStorage.setItem('vv_gh_admin','true');renderAdminModal();}else{showToast('Galat PIN! 1234 daalein');}return false;">
+              <input id="admPin" type="password" placeholder="Enter PIN (1234)" required style="width:100%;padding:12px;border:1px solid var(--border-soft);border-radius:8px;text-align:center;letter-spacing:0.2em;margin-bottom:12px;">
+              <button type="submit" class="btn-crimson" style="width:100%;">Unlock Dashboard →</button>
+            </form>
+          </div>`;
+        return;
+      }
+
+      const tabsHtml = `
+        <button class="modal-x" onclick="closeAdminModal()">✕</button>
+        <div class="eyebrow">Owner Control Center</div>
+        <h2 class="serif-heading" style="font-size:30px;margin-bottom:14px;">Manage Sarees &amp; Orders</h2>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+          <button class="btn-outline" style="${adminTab==='inventory'?'background:#231B17;color:#fff;':''}" onclick="adminTab='inventory';renderAdminModal()">Inventory (${sarees.length})</button>
+          <button class="btn-outline" style="${adminTab==='upload'?'background:#231B17;color:#fff;':''}" onclick="adminTab='upload';renderAdminModal()">+ Upload Saree</button>
+          <button class="btn-outline" style="${adminTab==='orders'?'background:#231B17;color:#fff;':''}" onclick="adminTab='orders';renderAdminModal()">B2B Orders (${orders.length})</button>
+          <button class="btn-outline" onclick="adminAuthed=false;localStorage.removeItem('vv_gh_admin');renderAdminModal()">Lock</button>
+        </div>`;
+
+      if (adminTab === 'upload') {
+        body.innerHTML = tabsHtml + `
+          <form onsubmit="publishNewSaree(event)" style="background:#fff;padding:18px;border-radius:10px;border:1px solid var(--border-soft);display:grid;gap:12px;">
+            <label style="font-size:12px;font-weight:600;">Model Saree Photo (Gallery se upload karein) *<br><input type="file" id="uFile" accept="image/*" style="margin-top:6px;"></label>
+            <input type="url" id="uUrl" placeholder="Ya Image URL paste karein (https://...)" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;">
+            <label style="font-size:12px;font-weight:600;">Extra Closeup Photos (Up to 3, Optional)<br><input type="file" id="uGal" accept="image/*" multiple style="margin-top:6px;"></label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <input required id="uName" placeholder="Saree Name *" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;">
+              <input required id="uSku" placeholder="SKU Code (e.g. VV-209) *" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;">
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <select id="uCat" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;background:#fff;">
+                <option value="Banarasi Silk">Banarasi Silk</option><option value="Cotton & Linen">Cotton &amp; Linen</option><option value="Bridal & Festive">Bridal &amp; Festive</option><option value="Organza & Tissue">Organza &amp; Tissue</option>
+              </select>
+              <input required id="uFab" placeholder="Fabric (e.g. Pure Katan Silk) *" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;">
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <input required id="uRate" type="number" min="100" placeholder="Wholesale Rate ₹/pc *" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;">
+              <input required id="uMoq" type="number" min="1" value="5" placeholder="MOQ Pcs *" style="padding:10px;border:1px solid var(--border-soft);border-radius:8px;">
+            </div>
+            <label style="font-size:13px;font-weight:600;"><input type="checkbox" id="uRw" checked> Show on Home Page 3D Runway</label>
+            <button type="submit" class="btn-crimson">Publish Saree Live →</button>
+          </form>`;
+      } else if (adminTab === 'orders') {
+        body.innerHTML = tabsHtml + (!orders.length ? `<p style="text-align:center;padding:30px;color:var(--text-muted);">No wholesale orders yet.</p>` : orders.map((o, idx) => `
+          <div style="background:#fff;padding:14px;border-radius:10px;border:1px solid var(--border-soft);margin-bottom:10px;">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <div><strong style="color:var(--accent-red);font-size:12px;">${o.order_code}</strong><div style="font-weight:700;">${o.business_name} (${o.buyer_name})</div><div style="font-size:12px;color:var(--text-muted);">📞 ${o.phone} • ${o.city_state}</div></div>
+              <div><strong>${fmtINR(o.total_amount)}</strong>
+                <select onchange="updateOrderSt(${idx}, this.value)" style="display:block;margin-top:6px;padding:6px;border-radius:6px;background:#231B17;color:#fff;font-size:12px;">
+                  ${['Pending','Confirmed','Packed','Dispatched'].map(st => `<option ${o.status===st?'selected':''}>${st}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+          </div>`).join(''));
+      } else {
+        body.innerHTML = tabsHtml + `<div style="display:flex;justify-content:flex-end;margin-bottom:10px;"><button class="btn-outline" style="font-size:12px;" onclick="sarees=JSON.parse(JSON.stringify(DEFAULT_SAREES));saveSarees();renderAdminModal();showToast('Demo data restored')">Reset Demo Sarees</button></div>` + sarees.map((s, idx) => `
+          <div style="background:#fff;padding:10px 12px;border-radius:8px;border:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <img src="${s.model_image}" style="width:44px;height:58px;object-fit:cover;border-radius:5px;">
+              <div><strong style="font-size:14px;">${s.name}</strong><div style="font-size:12px;color:var(--text-muted);">${s.sku} • ${fmtINR(s.wholesale_price)}/pc • MOQ ${s.moq}</div></div>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button class="btn-outline" style="padding:5px 10px;font-size:11.5px;${s.is_runway?'background:#231B17;color:#F4D8AE;':''}" onclick="sarees[${idx}].is_runway=!sarees[${idx}].is_runway;sarees[${idx}].runway_order=1;saveSarees();renderAdminModal()">${s.is_runway?'On Runway':'+ Runway'}</button>
+              <button class="btn-outline" style="padding:5px 10px;font-size:11.5px;" onclick="const r=prompt('New Rate ₹:',sarees[${idx}].wholesale_price);if(r){sarees[${idx}].wholesale_price=Number(r);saveSarees();renderAdminModal();}">Edit ₹</button>
+              <button onclick="sarees.splice(${idx},1);saveSarees();renderAdminModal()" style="background:#FCE8E6;color:#C22B1F;border:0;padding:5px 10px;border-radius:6px;cursor:pointer;font-size:11.5px;">Del</button>
+            </div>
+          </div>`).join('');
+      }
+    }
+
+    function updateOrderSt(idx, st) {
+      orders[idx].status = st;
+      if (st === 'Dispatched') {
+        const lr = prompt('Transport / Courier LR Number daalein (Optional):');
+        if (lr !== null) orders[idx].tracking_info = lr;
+      }
+      localStorage.setItem('vv_gh_orders_v1', JSON.stringify(orders));
+      showToast('Order status updated to ' + st);
+    }
+
+    function compressFile(file) {
+      return new Promise(res => {
+        const r = new FileReader();
+        r.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            const sc = Math.min(1, 900 / img.width);
+            const c = document.createElement('canvas');
+            c.width = Math.round(img.width * sc); c.height = Math.round(img.height * sc);
+            c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+            res(c.toDataURL('image/webp', 0.82));
+          };
+          img.src = r.result;
+        };
+        r.readAsDataURL(file);
+      });
+    }
+
+    async function publishNewSaree(e) {
+      e.preventDefault();
+      const file = document.getElementById('uFile').files[0];
+      const url = document.getElementById('uUrl').value.trim();
+      const galFiles = Array.from(document.getElementById('uGal').files || []).slice(0, 3);
+      let mainImg = url;
+      if (file) mainImg = await compressFile(file);
+      if (!mainImg) return showToast('Please upload a model photo or URL!');
+      const gal = await Promise.all(galFiles.map(compressFile));
+      const moqVal = Math.max(1, Number(document.getElementById('uMoq').value) || 5);
+      const isRw = document.getElementById('uRw').checked;
+
+      sarees.unshift({
+        id: String(Date.now()),
+        sku: document.getElementById('uSku').value.trim().toUpperCase(),
+        name: document.getElementById('uName').value.trim(),
+        category: document.getElementById('uCat').value,
+        fabric: document.getElementById('uFab').value.trim(),
+        wholesale_price: Number(document.getElementById('uRate').value),
+        moq: moqVal,
+        set_description: `${moqVal} Assorted Shades Set • 6.3m with Blouse`,
+        description: 'Direct factory loom saree crafted for wholesale showroom demand.',
+        model_image: mainImg,
+        gallery_images: [mainImg, ...gal],
+        is_runway: isRw, runway_order: isRw ? 0 : 99, badge: 'New Arrival', pin: [49, 40],
+        pack_options: [`${moqVal}-Pc Assorted Set`, `${moqVal}-Pc Single Color`, `${moqVal * 2}-Pc Showroom Lot`]
+      });
+      saveSarees();
+      adminTab = 'inventory';
+      renderAdminModal();
+      showToast('New Saree published live!');
+    }
+
+    /* ================= INIT & STAGE EVENTS ================= */
+    window.addEventListener('DOMContentLoaded', () => {
+      initRunway();
+      renderCatalog();
+      updateBagBadge();
+
+      const stage = document.getElementById('rwStage');
+      const panelWrap = document.getElementById('rwPanelWrap');
+      const cursor = document.getElementById('rwCursor');
+
+      window.addEventListener('resize', () => { rwMeasure(); rwRenderBodies(); });
+
+      // Autoplay 5s
+      setInterval(() => {
+        if (rwPlaying && !rwZoomed && !rwDragging && !rwPanelHover && !rwEngaged) rwNext();
+      }, 5000);
+
+      panelWrap.addEventListener('pointerenter', () => { rwPanelHover = true; });
+      panelWrap.addEventListener('pointerleave', () => { rwPanelHover = false; });
+
+      // Custom Cursor
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.getElementById('runwayRoot').classList.add('rw--cursor');
+        let cx = 0, cy = 0, tx = 0, ty = 0, active = false, cRaf = 0;
+        const lerp = () => {
+          cRaf = 0; cx += (tx - cx) * 0.18; cy += (ty - cy) * 0.18;
+          cursor.style.transform = `translate3d(${cx.toFixed(1)}px, ${cy.toFixed(1)}px, 0)`;
+          if (Math.hypot(tx - cx, ty - cy) > 0.2) cRaf = requestAnimationFrame(lerp);
+        };
+        stage.addEventListener('pointermove', e => {
+          if (e.pointerType !== 'mouse') return;
+          const r = stage.getBoundingClientRect(); tx = e.clientX - r.left; ty = e.clientY - r.top;
+          if (!active) { cx = tx; cy = ty; active = true; cursor.classList.add('is-on'); }
+          cursor.classList.toggle('is-view', !!e.target.closest('[data-rw-zoom]') && !rwDragging);
+          cursor.classList.toggle('is-link', !!e.target.closest('[data-go]') && !rwDragging);
+          if (!cRaf) cRaf = requestAnimationFrame(lerp);
+        });
+        stage.addEventListener('pointerleave', () => { active = false; cursor.classList.remove('is-on', 'is-view', 'is-link'); });
+      }
+
+      // Drag / Swipe
+      let sx = 0, sy = 0, st = 0, pid = null, lock = false;
+      stage.addEventListener('pointerdown', e => {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        sx = e.clientX; sy = e.clientY; st = rwTarget; pid = e.pointerId; lock = false;
+      });
+      stage.addEventListener('pointermove', e => {
+        if (e.pointerId !== pid) return;
+        const dx = e.clientX - sx, dy = e.clientY - sy;
+        if (!lock) {
+          if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) { pid = null; return; }
+          if (Math.abs(dx) > 8 && Math.abs(dx) > 1.2 * Math.abs(dy)) {
+            lock = true; rwDragging = true;
+            document.getElementById('runwayRoot').classList.add('is-dragging');
+            stage.setPointerCapture(pid);
+          } else return;
+        }
+        rwTarget = st - dx / rwUnit; rwStill = false;
+        document.getElementById('runwayRoot').classList.remove('rw--still');
+        rwKick();
+      });
+      const endDrag = e => {
+        if (e.pointerId !== pid) return; pid = null;
+        if (!rwDragging) return;
+        rwDragging = false; document.getElementById('runwayRoot').classList.remove('is-dragging');
+        rwSuppressUntil = performance.now() + 60;
+        const dx = e.clientX - sx, from = Math.round(st);
+        if (Math.abs(dx) > 35) rwMoveTo(from + (dx > 0 ? -1 : 1));
+        else rwMoveTo(from);
+      };
+      stage.addEventListener('pointerup', endDrag);
+      stage.addEventListener('pointercancel', endDrag);
+
+      stage.addEventListener('click', e => {
+        if (performance.now() < rwSuppressUntil) return;
+        const go = e.target.closest('[data-go]');
+        if (go) {
+          const idx = Number(go.dataset.go);
+          if (idx === rwIndex) rwOpenZoom();
+          else rwGoTo(idx);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
